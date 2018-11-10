@@ -1,0 +1,8 @@
+% (C) 2016: Hans Georg Schaathun <georg@schaathun.net>
+
+% Use simple HTML tags for basic markup such as emphasis and boldface.
+% By default tex4ht uses complex CSS styles, which makes it hard to
+% adapt the styling of the web version independently of the PDF style.
+
+\Configure{emph}{\ifvmode\ShowPar\fi\HCode{<em>}}{\HCode{</em>}}
+\Configure{textbf}{\ifvmode\ShowPar\fi\HCode{<b>}}{\HCode{</b>}}

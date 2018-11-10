@@ -1,0 +1,20 @@
+% (C) 2016: Hans Georg Schaathun <hg@schaathun.net> 
+
+% HEADER (meta, scripts, css)
+
+\Configure{@HEAD}{\HCode{%
+  <meta name="description" content="\@description"/>\Hnewline
+  <meta name="author" content="\@author" />\Hnewline
+  <link rel="stylesheet" type="text/css" href="htmlbook.css" />\Hnewline
+  <script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script>\Hnewline
+}}
+
+% FIGURES
+
+\AtBeginDocument{\input figurefix.cfg}
+
+% CODE
+
+\AtBeginDocument{\input listingsfix.cfg}
+\def\code#1{\Tg<code class="inline">#1\Tg</code>}

@@ -1,0 +1,67 @@
+% (C) 2018: Hans Georg Schaathun <georg@schaathun.net>
+%
+% The package provides generic features to handle LaTeX documents for HTML.
+
+% Language and character set
+\RequirePackage[shorthands=off]{babel}
+\RequirePackage[utf8x]{inputenc}
+\RequirePackage[T1]{fontenc}
+
+% Companion packages for special features.
+\RequirePackage{plainhtml}
+\RequirePackage{thmbox}
+
+% A few very common packages
+\RequirePackage{graphicx}   % Included here to allow fixes
+\RequirePackage[leqno]{amsmath}
+\RequirePackage{hyperref}
+\RequirePackage{comment}
+
+\IfFileExists{newfloat.sty}{\RequirePackage{newfloat}}{}
+
+% LAYOUT
+
+\parindent=0pt
+\parskip=1.5ex
+
+% TITLES
+
+\def\module#1{\gdef\@module{#1}}
+
+\module{Taught Module}
+\def\sectionmark#1{%
+   \gdef\@pagetitle{#1}%
+   \gdef\@pagesubtitle{\@title}}
+\def\subsectionmark#1{%
+   \gdef\@pagesubtitle{#1}}
+\gdef\@pagetitle{\@title}
+\gdef\@pagesubtitle{}
+
+\def\desc#1{\gdef\@description{#1}}
+\def\authorurl#1{\gdef\@authorurl{#1}}
+\authorurl{http://www.ntnu.no/}
+\def\authoremail#1{\gdef\@authoremail{#1}}
+
+% CODE
+
+\def\code#1{\texttt{#1}}
+
+% HYPERLINKING
+
+\def\baseurl#1{\gdef\hg@baseurl{#1}}
+\baseurl{}
+
+% HTML
+
+\newif\ifhtml
+\@ifpackageloaded{tex4ht}{\htmltrue}{\htmlfalse}
+
+% OTHER
+
+\ifhtml
+  \def\clearfloat{\Tg<div class=clear>\Tg</div>}
+\else
+  \let\clearfloat\relax
+\fi
+
+\endinput
