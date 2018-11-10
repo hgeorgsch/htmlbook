@@ -1,0 +1,19 @@
+body {
+   font-size: 1.2em ;
+}
+a:link {
+    color: /* NTNU main blue */ #00509E;
+}
+a:visited {
+    color: /* NTNU */ rgba( 121, 162, 206, 1 ) ;
+}
+a:hover {
+    color: /* NTNU */ rgba( 173, 32, 142, 1 ) ;
+}
+a:active {
+    color: white; 
+    background-color: /* NTNU */ rgba( 173, 32, 142, 1 ) ;
+}
+.verb {
+   font-family: monospace ;
+}

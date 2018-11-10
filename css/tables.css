@@ -1,0 +1,67 @@
+/* Tables */
+
+dt {
+   color : red ;
+}
+table {
+   border : 1 ;
+}
+em.alert {
+   color : red ;
+}
+th {
+   border-width : 1px ;
+   background : blue ;
+   color : white ;
+   padding : 1mm ;
+}
+th.session {
+   background : pink ;
+   color : black ;
+   min-width : 2in ;
+}
+th.slides {
+   min-width : 20mm ;
+}
+th.video {
+   min-width : 12cm ;
+}
+td {
+   border-width : 1px ;
+   border-color : blue ;
+   border-style : solid ;
+   padding : 1mm ;
+   min-width : 15mm ;
+}
+td.primary {
+   background : #66FF99 ;
+   min-width : 12cm ;
+}
+td.secondary {
+   background : #00CCFF ;
+}
+td.example {
+   background : purple ;
+}
+td.example a:link {
+   color : white ;
+}
+td.example a:visited {
+   color : #707070 ;
+}
+td.anecdotal {
+   background : yellow ;
+}
+td.deprecated {
+   background : black ;
+   color : red ;
+}
+td.deprecated a:link {
+   color : pink ;
+}
+td.deprecated a:visited {
+   color : gray ;
+}
+td.day {
+   background : #00CCFF ;
+}

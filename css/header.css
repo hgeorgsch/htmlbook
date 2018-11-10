@@ -1,0 +1,61 @@
+div.author, div.date {
+   display: inline ;
+}
+#topcontainer {
+           background-color: white;
+           width: 100%;
+           clear: both;
+           height: 56px; /**/
+           /* border-top: 10px solid white ; */
+           margin-bottom: -20px;
+           color: /* NTNU main blue */ #00509E;
+}
+#topcontainer .lhfull {
+           font-size: 1.8em;
+           font-weight : bold ;
+	   text-align : left ;
+	   clear : both ;
+}
+#topcontainer .lh {
+           font-size: 1.8em;
+           font-weight : bold ;
+	   float : left ;
+}
+#topcontainer .lhsub {
+           font-size: 0.9em;
+           font-weight : bold ;
+	   float : left ;
+}
+#topcontainer .rh {
+           font-size: 0.9em;
+           font-weight : bold ;
+	   float : right ;
+}
+
+#pageheadcontainer {
+           width: 100%;
+           background-color: /* NTNU main blue */ #00509E;
+           clear: both;
+           height: 100px ; /* 90px */
+           border-bottom: 6px solid #22221E;
+           border-top: 6px solid #22221E;
+           text-align: center;
+           /* font-size: 2.5em; /**/
+           color: white ;
+           /* line-height: 30px; */
+           margin-bottom: 0px;
+           margin-top: 7px;
+}
+#pageheadcontainer h1 {
+           margin : 5px 5px 5px 5px ;
+           text-align: center;
+           color: white ;
+           font-size: 2.4em ;
+}
+#pageheadcontainer h2 {
+           margin : 5px 5px 5px 5px ;
+           text-align: center;
+           color: white ;
+           font-size: 1.5em ;
+}
+

@@ -1,0 +1,36 @@
+.quotation {
+   font-style: italic ;
+}
+
+/* Fix peculiarities for MathJax */
+.equation-star td {
+   border: none ;
+}
+
+/* Footer (header has its own file) */
+footer {
+   clear: both ;
+}
+
+/* Tweeks */
+
+.clear {
+   clear : both ;
+}
+
+
+/* Listings */
+code .label {
+   padding-right: 0.8em ;
+}
+code {
+     background : LemonChiffon  ;
+}
+code.haskell {
+     background : Aquamarine  ;
+}
+code.block {
+     /* white-space: pre ; */
+     padding : 1mm ;
+     display : block ;
+}
