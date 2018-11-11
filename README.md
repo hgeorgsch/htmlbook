@@ -7,7 +7,9 @@ table of contents as a left hand menu.  Documents are compiled with TeX4ht.
 
 ## Does it work?
 
-It is highly experimental, but it works for me.  It is not robust, and
+It is highly experimental, but it works for me.  
+
+Bug reports and tips to make it more robust are welcome.
 
 **User Documentation:** Sorry, read the source.
 
@@ -24,7 +26,9 @@ The styles4ht directory must be placed in the texmf search path,
 one way or another. The easiest is probably to include it in the
 TEXINPUTS environment variable.
 
-### CSS styles
+### CSS styles:
+
+## Preparing a document:
 
 ## Feedback:
 **Developer:** Hans Georg Schaathun: <georg+tex@schaathun.net>

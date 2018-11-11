@@ -1,0 +1,13 @@
+*.html
+*.css
+*.aux
+*.log
+*.lg
+*.dvi
+*.4ct
+*.4tc
+*.out
+*.idv
+*.xref
+*.tmp
+toc.cfg
