@@ -32,8 +32,8 @@ HTML code.
 The css/htmlbook.css file can be recreated using the Makefile in the
 directory. It is the concatenation of other files covering different
 functional categories.  There is also a script to generate the styles
-for theorem-like environments.  These are not documented; read the
-source.
+for theorem-like environments.  These are not documented; please
+read the source.
 
 ## Preparing a document:
 
@@ -44,7 +44,7 @@ Although tex4ht can convert graphics automatically, the result is better
 if graphics file is converted to web compatible format (PNG, JPEG, or SVG)
 in addition to bounding box information for the latex compiler.
 For instance, PDF vector graphics should be converted to SVG (e.g.\ by
-inskape) and have bonding box definition (.xbb file) generated as shown
+inkscape) and have bonding box definition (.xbb file) generated as shown
 in the Makefile.  The template is set up to handle these two files
 correctly.
 
