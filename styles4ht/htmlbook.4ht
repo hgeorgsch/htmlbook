@@ -16,5 +16,5 @@
 
 % CODE
 
-\AtBeginDocument{\input listingsfix.cfg}
+%\AtBeginDocument{\input listingsfix.cfg}
 \def\code#1{\Tg<code class="inline">#1\Tg</code>}
