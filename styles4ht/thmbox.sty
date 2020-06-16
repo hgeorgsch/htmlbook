@@ -2,12 +2,17 @@
 
 \RequirePackage{theorem,comment}
 
+\excludecomment{todo}%\newtheorem{todo}{TODO}
+
+\newif\ifnorsk
+\iflanguage{nynorsk}{\norsktrue}{\norskfalse}
+
+\ifnorsk
 \newtheorem{problem}{Øvingsoppgåve}[section]
 \newtheorem{worked}{Eksempeloppgåve}[section]
 
 \newtheorem{solution}{Løysing}[section]
 
-\excludecomment{todo}%\newtheorem{todo}{TODO}
 \newtheorem{exercise}{Øving}[section]
 \newtheorem{definition}{Definisjon}[section]
 
@@ -21,4 +26,23 @@
 \newtheorem{principle}{Prinsipp}[section]
 \newtheorem{study}{Les}[section]
 \newtheorem{example}{Døme}[section]
+\else
+\newtheorem{problem}{Problem}[section]
+\newtheorem{worked}{Worked Example}[section]
 
+\newtheorem{solution}{Solution}[section]
+
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{definition}{Definition}[section]
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\newtheorem{remark}{Remark}[section]
+
+\newtheorem{remember}{Remember}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{study}{Read}[section]
+\newtheorem{example}{Example}[section]
+\fi
