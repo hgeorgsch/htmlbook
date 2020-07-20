@@ -1,0 +1,31 @@
+% (C) 2020: Hans Georg Schaathun <georg@schaathun.net> 
+%
+% This style file provides macros to embed video talks in htmlbook documents.
+% + \youtube for youtube videoes
+% + \htmltalk for html/javascript talks, e.g. in reveal.js
+
+%\RequirePackage{plainhtml}
+\RequirePackage{htmlbook}
+\def\talkdir#1{\gdef\@talkdir{#1}}
+\talkdir{}
+\ifhtml
+  \global\newcommand{\youtube}[4][htmltalkcontainer]{%
+    \Tg<div class="#1">
+    \Tg<iframe src="#2" allowfullscreen class="htmltalk">
+    \Tg</iframe>
+    \Tg</div>
+    \par\EndP}
+  \global\newcommand{\htmltalk}[3][htmltalkcontainer]{%
+    \Tg<div class="#1">
+    \Tg<iframe src="\@talkdir #2" allowfullscreen class="htmltalk">
+    \Tg</iframe>
+    \Tg</div>
+    \par\EndP}
+\else
+  \global\newcommand{\htmltalk}[3][htmltalk]{%
+     \marginpar{\raggedright\textbf{Foilar}: \footnotesize
+     \href{\baseurl\@talkdir #2}{#3}}}
+  \global\newcommand{\youtube}[4][htmltalk]{%
+     \marginpar{\raggedright\textbf{Video}: \footnotesize
+     \href{#3}{#4}}}
+\fi
