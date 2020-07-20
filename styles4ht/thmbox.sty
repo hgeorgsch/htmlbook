@@ -42,12 +42,12 @@
 }
 \else
 \RequirePackage{amsthm}
+\theoremstyle{definition}
 \fi
 
 \newif\ifnorsk
 \iflanguage{nynorsk}{\norsktrue}{\norskfalse}
 
-\theoremstyle{definition}
 
 \ifnorsk
 \newtheorem{problem}{Øvingsoppgåve}[section]
