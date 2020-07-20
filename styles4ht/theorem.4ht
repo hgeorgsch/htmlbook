@@ -5,7 +5,7 @@
 % the environment name.  This can be used to style different
 % theorem-like environments using CSS.
 
-\immediate\write-1{version 2009-05-21-09:32}
+\immediate\write-1{theorem.4ht 2020-07-20-14:30}
 
 \def\htmlbook@thm#1#2#3{%
   \write-1{htmlbook@thm (tex4ht) #1 #2 #3}

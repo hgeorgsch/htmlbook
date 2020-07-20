@@ -1,8 +1,8 @@
-%% (C) 2018: Hans Georg Schaathun <georg@schaathun.net> 
+% (C) 2020: Hans Georg Schaathun <georg@schaathun.net> 
 
 \immediate\write-1{thmbox.4ht version 2009-05-21-09:32}
 
-\RequirePackage{theorem,comment}
+\RequirePackage{comment,theorem}
 
 \ifhtml
 \def\newtheorem#1{%
@@ -40,10 +40,14 @@
    % \HCode{<div class="#3"></div>}%
    \@thm{#1}{#2}%
 }
+\else
+\RequirePackage{amsthm}
 \fi
 
 \newif\ifnorsk
 \iflanguage{nynorsk}{\norsktrue}{\norskfalse}
+
+\theoremstyle{definition}
 
 \ifnorsk
 \newtheorem{problem}{Øvingsoppgåve}[section]
