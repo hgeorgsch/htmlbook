@@ -1,15 +1,53 @@
-% (C) 2018: Hans Georg Schaathun <georg@schaathun.net> 
+%% (C) 2018: Hans Georg Schaathun <georg@schaathun.net> 
+
+\immediate\write-1{thmbox.4ht version 2009-05-21-09:32}
 
 \RequirePackage{theorem,comment}
 
-\excludecomment{todo}%\newtheorem{todo}{TODO}
+\ifhtml
+\def\newtheorem#1{%
+  \write-1{newtheorem #1}
+  \@ifnextchar[{\@othm{#1}}{\@nthm{#1}}}
+\def\@nthm#1#2{%
+  \write-1{@nthm #1 #2}
+  \@ifnextchar[{\@xnthm{#1}{#2}}{\@ynthm{#1}{#2}}}
+
+\def\@xnthm#1#2[#3]{%
+  \write-1{@xnthm #1 #2 #3}
+  \expandafter\@ifdefinable\csname #1\endcsname
+    {\@definecounter{#1}\@newctr{#1}[#3]%
+     \expandafter\xdef\csname the#1\endcsname{%
+       \expandafter\noexpand\csname the#3\endcsname \@thmcountersep
+          \@thmcounter{#1}}%
+     \global\@namedef{#1}{\htmlbook@thm{#1}{#2}{#1}}%
+     \global\@namedef{end#1}{\@endtheorem}}}
+\def\@ynthm#1#2{%
+  \write-1{@ynthm #1 #2}
+  \expandafter\@ifdefinable\csname #1\endcsname
+    {\@definecounter{#1}%
+     \expandafter\xdef\csname the#1\endcsname{\@thmcounter{#1}}%
+     \global\@namedef{#1}{\htmlbook@thm{#1}{#2}{#1}}%
+     \global\@namedef{end#1}{\@endtheorem}}}
+\def\@othm#1[#2]#3{%
+  \write-1{@othm #1 #2 #3}
+  \@ifundefined{c@#2}{\@nocounterr{#2}}%
+    {\expandafter\@ifdefinable\csname #1\endcsname
+    {\global\@namedef{the#1}{\@nameuse{the#2}}%
+  \global\@namedef{#1}{\htmlbook@thm{#2}{#3}{#1}}%
+  \global\@namedef{end#1}{\@endtheorem}}}}
+\def\htmlbook@thm#1#2#3{%
+   \write-1{htmlbook@thm (TeX) #1 #2 #3}
+   % \HCode{<div class="#3"></div>}%
+   \@thm{#1}{#2}%
+}
+\fi
 
 \newif\ifnorsk
 \iflanguage{nynorsk}{\norsktrue}{\norskfalse}
 
 \ifnorsk
 \newtheorem{problem}{Øvingsoppgåve}[section]
-\newtheorem{worked}{Eksempeloppgåve}[section]
+\newtheorem{worked}[problem]{Eksempeloppgåve}
 
 \newtheorem{solution}{Løysing}[section]
 
@@ -26,9 +64,10 @@
 \newtheorem{principle}{Prinsipp}[section]
 \newtheorem{study}{Les}[section]
 \newtheorem{example}{Døme}[section]
+\newtheorem{Assignment}{Vekesmål}[section]
 \else
 \newtheorem{problem}{Problem}[section]
-\newtheorem{worked}{Worked Example}[section]
+\newtheorem{worked}[problem]{Worked Example}
 
 \newtheorem{solution}{Solution}[section]
 
@@ -45,4 +84,5 @@
 \newtheorem{principle}{Principle}[section]
 \newtheorem{study}{Read}[section]
 \newtheorem{example}{Example}[section]
+\newtheorem{Assignment}{Assignment}[section]
 \fi

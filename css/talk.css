@@ -1,0 +1,43 @@
+.bigframe {
+   width: 840px ;
+   height: 560px ;
+   position: center ;
+   margin: 0px ;
+   padding: 0px ;
+   border: none ;
+   resize: both;
+   overflow: hidden;
+   direction: rtl ;
+   z-index: -1 ;
+}
+.htmltalkcontainer {
+   width: 420px ;
+   height: 280px ;
+   float: right ;
+   margin: 0px ;
+   padding: 0px ;
+   border: none ;
+   resize: both;
+   overflow: hidden;
+   direction: rtl ;
+   z-index: -1 ;
+}
+.htmltalkcontainer video {
+   width: 98% ;
+   height: 97% ;
+   margin: 2px ;
+   position: center ;
+}
+
+iframe.htmltalk {
+   width: 98% ;
+   height: 97% ;
+   margin: 2px ;
+   position: center ;
+   /*
+   width: 400px ;
+   height: 280px ;
+   float: right ;
+   margin: 2px ;
+   */
+}

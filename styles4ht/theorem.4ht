@@ -7,13 +7,10 @@
 
 \immediate\write-1{version 2009-05-21-09:32}
 
-\let\theo:@thm=\@thm
-\def\@thm#1#2{%
-   \Tg<div class="#1">\Tg</div>%
-   \expandafter\ifx \csname end#1\endcsname\@endtheorem \else%
-        \expandafter\let \csname end#1\endcsname\@endtheorem%
-   \fi%
-   \theo:@thm{#1}{#2}%
+\def\htmlbook@thm#1#2#3{%
+  \write-1{htmlbook@thm (tex4ht) #1 #2 #3}
+  \HCode{<div class="#3"></div>}%
+  \@thm{#1}{#2}%
 }
 
 \Hinput{theorem}

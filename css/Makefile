@@ -1,5 +1,5 @@
 
-htmlbook.css: floats.css header.css std.css toc.css misc.css  tables.css thmbox.css
+htmlbook.css: floats.css header.css std.css toc.css misc.css  tables.css thmbox.css talk.css
 	cat $^ > $@
 
 thmbox.css:

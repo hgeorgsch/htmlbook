@@ -7,6 +7,11 @@
 \RequirePackage[utf8x]{inputenc}
 \RequirePackage[T1]{fontenc}
 
+% HTML
+
+\newif\ifhtml
+\@ifpackageloaded{tex4ht}{\htmltrue}{\htmlfalse}
+
 % Companion packages for special features.
 \RequirePackage{plainhtml}
 \RequirePackage{thmbox}
@@ -51,10 +56,6 @@
 \def\baseurl#1{\gdef\hg@baseurl{#1}}
 \baseurl{}
 
-% HTML
-
-\newif\ifhtml
-\@ifpackageloaded{tex4ht}{\htmltrue}{\htmlfalse}
 
 % OTHER
 
