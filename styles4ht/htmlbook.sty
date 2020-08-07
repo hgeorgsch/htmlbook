@@ -89,6 +89,7 @@
   \sec@sec
 }
 \def\endesec{
+  \ifhtml\Tg<div class="clear">\Tg</div>\fi
   \addtocounter{esec}{-1}
   \ifcase\value{esec}\cleardoublepage\fi
 }

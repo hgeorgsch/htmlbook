@@ -1,0 +1,19 @@
+
+h3.likesectionHead, h3.sectionHead {
+   font-size: 1.4em ;
+   color: /* NTNU main blue */ #00509E;
+
+}
+h4.likesubsectionHead, h4.subsectionHead {
+   font-size: 1.3em ;
+   color: /* NTNU main blue */ #00509E;
+}
+h5.likesubsubsectionHead, h5.subsubsectionHead {
+   font-size: 1.15em ;
+}
+h6, .likeparagraphHead, .paragraphHead {
+   font-size: 1.0em ;
+}
+.likesubparagraphHead, .subparagraphHead {
+   font-size: 1em ;
+}
