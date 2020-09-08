@@ -34,3 +34,13 @@ code.block {
      padding : 1mm ;
      display : block ;
 }
+
+/* Facit */
+.fasit {
+     /* white-space: pre ; */
+     visibility : hidden ;
+}
+:hover > .fasit {
+     /* white-space: pre ; */
+     visibility : visible ;
+}
