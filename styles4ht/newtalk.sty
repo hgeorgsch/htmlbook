@@ -1,0 +1,35 @@
+\RequirePackage{talk}
+
+\def\talkdir#1{\gdef\@talkdir{#1}}
+\talkdir{}
+
+\ifhtml
+  \global\newcommand{\mpvideo}[3][htmltalkcontainer]{%
+    \Tg<div class="#1">
+       \Tg<video controls="controls">
+       \Tg<source src="#2" type="video/mp4" />
+       \Tg<p>
+         Sorry, your browser does not support this video.
+       \Tg</p>
+    \Tg</video>
+    \Tg</div>
+    \par\EndP}
+  \global\newcommand{\video}[3][htmltalkcontainer]{%
+    \Tg<div class="#1">
+    \Tg<video controls="controls">
+       \Tg<source src="#2.mp4" type="video/mp4" />
+       \Tg<source src="#2.ogv" type="video/ogg" />
+       \Tg<p>
+         Sorry, your browser does not support this video.
+       \Tg</p>
+    \Tg</video>
+    \Tg</div>
+    \par\EndP}
+\else
+  \global\newcommand{\mpvideo}[3][htmltalk]{%
+     \marginpar{\raggedright\textbf{Video}: \footnotesize
+     \href{\@talkdir #2}{#3}}}
+  \global\newcommand{\video}[3][htmltalk]{%
+     \marginpar{\raggedright\textbf{Video}: \footnotesize
+     \href{\@talkdir #2.ogv}{#3}}}
+\fi
