@@ -57,6 +57,9 @@ appropriate CSS styles have been defined.  Existing theorem-style
 environments are defined in styles4ht/thmbox.sty, and the script in the
 css directory can generate corresponding styles.
 
+See [styles4ht/README.md]() for details on the different style files.
+
+
 ## Feedback:
 **Developer:** Hans Georg Schaathun: <georg+tex@schaathun.net>
 
